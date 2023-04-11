@@ -1,2 +1,5 @@
 # momentum_clone
-momentum clone coding from nomad coder lecture
+- This repository is for momentum clone coding files from nomad coder lecture
+
+# Purpose
+- To build basic concept of Java Script and improve skills
