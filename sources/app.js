@@ -19,7 +19,28 @@ let handleMouseLeave = function() {
     title.innerText = "your mouse leaved here";
 }
 
+let handleWindowResize = function() {
+    document.body.style.backgroundColor = "tomato";
+}
+
+let handleWindowCopy = function() {
+    alert("copy occured!!!");
+}
+
+function    handleWindowOffline() {
+    alert("WIFI off!!");
+}
+
+function    handleWindowOnline() {
+    alert("WIFI on!!!");
+}
+
 // element.addEventListener("event type", to_do);
 title.addEventListener("click", handleTitleClick);
 title.addEventListener("mouseenter", handleMouseEnter);
 title.addEventListener("mouseleave", handleMouseLeave);
+
+window.addEventListener("resize", handleWindowResize);
+window.addEventListener("copy", handleWindowCopy);
+window.addEventListener("offline", handleWindowOffline);
+window.addEventListener("online", handleWindowOnline);
