@@ -16,15 +16,18 @@ const calculator = {
         return (a ** b);
     }
 };
-// console.log(calculator.add(10, 2));
-// console.log(calculator.minus(10, 2));
-// console.log(calculator.multiply(10, 2));
-// console.log(calculator.divide(10, 2));
-// console.log(calculator.powerof("hi", 2));
 
 const age = prompt("How old are you?");
-// console.log("Your age is " + age + parseInt(age) + typeof(parseInt(age)));
-if (isNaN(age))
-    console.log("NaN : Please write a number");
+if (isNaN(age) || age < 0)
+    // using OR Operator
+    console.log("NaN or Lower than 0 : Please write a number");
+else if (age < 18)
+    console.log("You are too young.");
+else if (age >= 18 && age <= 50)
+    // using AND Operator
+    console.log("You can drink.");
+else if (age > 50 && age <= 80)
+    // using AND Operator
+    console.log("You should exercise.");
 else
-    console.log("Thank you for writing your age correctly ==> " + age);
+    console.log("You can do whatever you want to do.");
