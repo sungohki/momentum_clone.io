@@ -1,10 +1,13 @@
-const   hellos = document.getElementsByClassName("hello");
-// const   title = document.getElementsByTagName("h1");
-const   title = document.querySelector(".hello h1");
-// querySelector : find (first) element by way of CSS
-const   titles = document.querySelectorAll(".hello h1");
-// querySelectorAll : find all elements by way of CSS
+const   title = document.querySelector("div.hello:first-child h1");
+// queryselector : find (first) element by way of css
 
-console.log(hellos);
 console.log(title);
-console.log(titles);
+// way to chanege property of element
+title.style.color = "blue";
+
+// addEventListener method
+let handleTitleClick = function() {
+    console.log("title is clicked!");
+}
+// element.addEventListener("event type", to_do);
+title.addEventListener("click", handleTitleClick);
