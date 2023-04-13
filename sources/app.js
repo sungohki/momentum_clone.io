@@ -2,23 +2,19 @@
 // variables
 const   loginForm = document.querySelector("#login-form");
 const   loginInput = document.querySelector("#login-form input");
-const   link = document.querySelector("a");
+const   greeting = document.querySelector("#greeting");
+const   CLASSNAME_HIDDEN = "hidden";
 
 // functions
 function    onLoginSubmit(event) {
     event.preventDefault();
-    // preventDefault() : prevent any of Event's default behavior of brawser
-    console.log(event);
-    console.log(loginInput.value);
-}
+    loginForm.classList.add(CLASSNAME_HIDDEN);
 
-function    handleLinkClick(event) {
-    event.preventDefault();
-    console.log(event);
-    // alert("clicked");
+    const username = loginInput.value;
+    // greeting.innerText = "Hello, " + username;
+    greeting.innerText = `Hello, ${username}`;
+    greeting.classList.remove(CLASSNAME_HIDDEN);
 }
 
 // EventListener
 loginForm.addEventListener("submit", onLoginSubmit);
-link.addEventListener("click", handleLinkClick);
-// handleLinkClick({information about event that just happened});
