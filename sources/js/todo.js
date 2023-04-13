@@ -7,12 +7,23 @@ const	toDoList = document.querySelector("ul#todo-list");
 // init
 
 // function
+function	deleteToDo(event) {
+	// event.target : clicked button tag
+	const li = event.target.parentElement;
+	li.remove();
+}
+
 function	paintToDo(newTodo) {
 	// newToDo : text
 	const li = document.createElement("li");
 	const span = document.createElement("span");
+	const button = document.createElement("button");
+
 	li.appendChild(span);
+	li.appendChild(button);
 	span.innerText = newTodo;
+	button.innerText = "❌";
+	button.addEventListener("click", deleteToDo);
 	toDoList.appendChild(li);
 }
 
