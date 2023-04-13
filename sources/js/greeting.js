@@ -7,6 +7,7 @@ const   loginForm = document.querySelector("#login-form");
 const   loginInput = document.querySelector("#login-form input");
 const   greeting = document.querySelector("#greeting");
 const   savedUsername = localStorage.getItem(USERNAME_KEY);
+const   toDoFormVisible = document.querySelector("#todo-form");
 
 // init settings
 if (savedUsername === null){
@@ -33,6 +34,7 @@ function    paintGreetings(username) {
     // modify greeting's innerText & show
     greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(CLASSNAME_HIDDEN);
+    toDoFormVisible.classList.remove(CLASSNAME_HIDDEN);
 }
 
 // EventListener
