@@ -8,10 +8,12 @@ const   CLASSNAME_HIDDEN = "hidden";
 // functions
 function    onLoginSubmit(event) {
     event.preventDefault();
+    // add class attr
     loginForm.classList.add(CLASSNAME_HIDDEN);
-
+    // save username data
     const username = loginInput.value;
-    // greeting.innerText = "Hello, " + username;
+    localStorage.setItem("username", username);
+    // modify greeting's innerText & show
     greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(CLASSNAME_HIDDEN);
 }
