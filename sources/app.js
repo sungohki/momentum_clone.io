@@ -1,11 +1,16 @@
 
 // variables
 const   loginForm = document.querySelector("#login-form");
-// Search input, button from loginFrom
-const   loginInput = loginForm.querySelector("input");
-const   loginButton = loginForm.querySelector("button");
+const   loginInput = document.querySelector("#login-form input");
 
-loginButton.addEventListener("click", function() {
-    const   userName = loginInput.value;
-    console.log(userName);
-});
+function    onLoginSubmit(event) {
+    event.preventDefault();
+    // preventDefault() : prevent any of Event's default behavior of brawser
+    // ex) submit ==> Default : refresh the page
+    console.log(event);
+    console.log(loginInput.value);
+}
+
+// submit : occur when user press or click "enter" key
+loginForm.addEventListener("submit", onLoginSubmit);
+// onLoginSubmit({event info}) ==> deliver event info about what user writed
