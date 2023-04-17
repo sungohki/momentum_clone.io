@@ -26,11 +26,12 @@ function	saveTodos(){
 function	deleteToDo(event) {
 	// event.target : clicked button tag
 	const li = event.target.parentElement;
+	const liId = li.id;
 	li.remove();
 	saveTodos();
 }
 
-function	paintToDo(newTodo) {
+function	paintToDo(newTodoObj) {
 	// newToDo : text
 	const li = document.createElement("li");
 	const span = document.createElement("span");
@@ -38,7 +39,8 @@ function	paintToDo(newTodo) {
 
 	li.appendChild(span);
 	li.appendChild(button);
-	span.innerText = newTodo;
+	li.id = newTodoObj.id;
+	span.innerText = newTodoObj.text;
 	button.innerText = "❌";
 	button.addEventListener("click", deleteToDo);
 	toDoList.appendChild(li);
@@ -48,8 +50,13 @@ function	handleToDoSubmit(event) {
 	event.preventDefault();		// prevent page refresh
 	const newToDo = toDoInput.value;
 	toDoInput.value = "";
-	toDos.push(newToDo);
-	paintToDo(newToDo);
+	// toDos.push(newToDo);
+	const newToDoObj = {
+		text:	newToDo,
+		id:		Date.now(),
+	};
+	toDos.push(newToDoObj);
+	paintToDo(newToDoObj);
 	saveTodos();
 }
 
