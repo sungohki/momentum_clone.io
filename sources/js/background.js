@@ -1,6 +1,6 @@
 
 // variables
-const	imageSrc = "img/";
+const	imageSrc = "./img/";
 const	images = [
 	"0.png",
 	"1.png",
@@ -9,10 +9,9 @@ const	images = [
 	"4.jpg",
 ];
 const	chosenImage = images[Math.floor(Math.random() * (images.length))];
-const	bgImage = document.createElement("img");
+const	bodyBackground = document.querySelector("body");
 
 // init
-bgImage.src = `${imageSrc}${chosenImage}`;
-document.body.appendChild(bgImage);
+bodyBackground.src = `${imageSrc}${chosenImage}`;
 
 // functions
