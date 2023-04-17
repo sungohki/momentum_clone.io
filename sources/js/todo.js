@@ -6,18 +6,21 @@ const	toDoForm = document.querySelector("form#todo-form");
 const	toDoInput = toDoForm.querySelector("input");
 const	toDoList = document.querySelector("ul#todo-list");
 
-const	toDos = [];
+let	toDos = [];
 const	savedTodos = localStorage.getItem(TODOS_KEY);
 
 // init
 if (savedTodos !== null) {
 	const parsedToDos = JSON.parse(savedTodos);
-	parsedToDos.forEach(paintToDo);
+	toDos = parsedToDos;		// update previous localStorage
+	toDos.forEach(paintToDo);
+	// parsedToDos.forEach((item) => func);	: apply specific func each of array elements
 }
 
 // function
 function	saveTodos(){
 	localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+	// stringify : converse paramete to string data type
 }
 
 function	deleteToDo(event) {
