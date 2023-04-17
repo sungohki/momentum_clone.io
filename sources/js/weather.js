@@ -16,7 +16,7 @@ function    onGeoOk(position) {
             const weatherTag = document.querySelector("#weather span:first-child");
             const cityTag = document.querySelector("#weather span:last-child");
             cityTag.innerText = data.name;
-            weatherTag.innerText = `${data.weather[0].main} / ${Math.floor(Number(data.main.temp))}`;
+            weatherTag.innerText = `${data.weather[0].main} / ${Math.floor(Number(data.main.temp))} degree /`;
     });
 }
 
