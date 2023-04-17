@@ -26,7 +26,8 @@ function	saveTodos(){
 function	deleteToDo(event) {
 	// event.target : clicked button tag
 	const li = event.target.parentElement;
-	const liId = li.id;
+	toDos = toDos.filter((item) => item.id !== parseInt(li.id));
+		// remove obj from toDos arr
 	li.remove();
 	saveTodos();
 }
@@ -60,5 +61,9 @@ function	handleToDoSubmit(event) {
 	saveTodos();
 }
 
-// event
+function	sexyFilter(obj, tagId) {
+	return (obj.id !== tagId);
+}
+
+// eventListener
 toDoForm.addEventListener("submit", handleToDoSubmit);
