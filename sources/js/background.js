@@ -12,6 +12,8 @@ const	chosenImage = images[Math.floor(Math.random() * (images.length))];
 const	bodyBackground = document.querySelector("body");
 
 // init
-bodyBackground.src = `${imageSrc}${chosenImage}`;
+bodyBackground.style.backgroundImage = `url(${imageSrc}${chosenImage})`;
+bodyBackground.style.backgroundSize = `100% 100%`;
+bodyBackground.style.backgroundRepeat = `no-repeat`;
 
 // functions
