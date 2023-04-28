@@ -11,10 +11,7 @@ const   toDoFormVisible = document.querySelector("#todo-form");
 
 const   appStart = false;
 
-// EventListener
-
-
-// init settings
+// Init
 if (savedUsername === null){
     // Func : show Login Form
     loginForm.classList.remove(CLASSNAME_HIDDEN);
@@ -23,6 +20,9 @@ if (savedUsername === null){
     // Func : show Greeting
     paintGreetings(savedUsername);
 }
+
+// EventListener
+
 
 // functions
 function    onLoginSubmit(event) {
