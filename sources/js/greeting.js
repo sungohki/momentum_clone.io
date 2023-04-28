@@ -9,13 +9,18 @@ const   greeting = document.querySelector("#greeting");
 const   savedUsername = localStorage.getItem(USERNAME_KEY);
 const   toDoFormVisible = document.querySelector("#todo-form");
 
+const   appStart = false;
+
+// EventListener
+
+
 // init settings
 if (savedUsername === null){
-    // show the form
+    // Func : show Login Form
     loginForm.classList.remove(CLASSNAME_HIDDEN);
     loginForm.addEventListener("submit", onLoginSubmit);
 } else {
-    // show the greeting
+    // Func : show Greeting
     paintGreetings(savedUsername);
 }
 
@@ -37,4 +42,3 @@ function    paintGreetings(username) {
     toDoFormVisible.classList.remove(CLASSNAME_HIDDEN);
 }
 
-// EventListener

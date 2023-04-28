@@ -8,12 +8,17 @@ const	images = [
 	"3.png",
 	"4.jpg",
 ];
+const	GAMEBOY = `${imageSrc}gameboy.png`;
 const	chosenImage = images[Math.floor(Math.random() * (images.length))];
+
+const	innerImage = document.querySelector("#gameboy-screen");
 const	bodyBackground = document.querySelector("body");
 
 // init
-bodyBackground.style.backgroundImage = `url(${imageSrc}${chosenImage})`;
-bodyBackground.style.backgroundSize = `100% 100%`;
+innerImage.style.backgroundImage = `url(${imageSrc}${chosenImage})`;
+bodyBackground.style.backgroundImage = `url(${GAMEBOY})`;
+bodyBackground.style.backgroundSize = `cover`;
 bodyBackground.style.backgroundRepeat = `no-repeat`;
+
 
 // functions
