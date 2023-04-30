@@ -8,42 +8,45 @@
     <title>Momentum App</title>
 </head>
 <body>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
     <!-- Main Screen -->
+    <div id="loading">
+		<img src="./img/mainloading.gif" width="100%">
+    </div>
     <section>
-        <div id="gameboy-screen">
+        <div id="gameboy-screen" class="hidden">
             <!-- clock -->
             <h2 id="clock">00:00:00</h2>
             
             <!-- form for login -->
             <form id="login-form" class="hidden">
-                <input type="text" placeholder="Write your ID" maxlength="15"/>
+                <input type="text" placeholder="Write your ID" maxlength="10" size="15" required/>
                 <button>enter</button>
             </form>
         
             <!-- greeting -->
-            <h1 id="greeting" class="hidden"></h1>
+            <div id="greetingHead">
+                <h1 id="greeting" class="hidden"></h1>
+            </div>
         
             <!-- form for todo-list -->
             <form id="todo-form" class="hidden">
-                <input type="text" placeholder="Write a To Do" required/>
+                <input type="text" placeholder="Write a To Do" size="15" required/>
             </form>
         
             <!-- list to do -->
             <ul id="todo-list"></ul>
         
             <!-- random quote & writer -->
-            <div id="quote">
-                <span></span>
-                <span></span>
-            </div>
-            <div id="weather">
-                <span></span>
-                <span></span>
-            </div>
+            <footer>
+                <div id="quote">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="weather">
+                    <span>no info</span>
+                    <span>🤔</span>
+                </div>
+            </footer>
         </div>
     </section>
 
