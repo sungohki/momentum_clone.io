@@ -39,6 +39,7 @@ function    paintGreetings(username) {
     // modify greeting's innerText & show
     greeting.innerText = `Hello, ${username}`;
     greeting.classList.remove(CLASSNAME_HIDDEN);
+	greeting.style.backgroundColor = `rgba(90, 90, 90, 0.5)`;
     toDoFormVisible.classList.remove(CLASSNAME_HIDDEN);
 }
 

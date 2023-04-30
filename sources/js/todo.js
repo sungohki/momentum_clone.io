@@ -38,8 +38,8 @@ function	paintToDo(newTodoObj) {
 	const span = document.createElement("span");
 	const button = document.createElement("button");
 
-	li.appendChild(span);
 	li.appendChild(button);
+	li.appendChild(span);
 	li.id = newTodoObj.id;
 	span.innerText = newTodoObj.text;
 	button.innerText = "❌";
