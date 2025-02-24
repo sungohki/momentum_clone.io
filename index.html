@@ -1,61 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Momentum App</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Main Screen -->
     <div id="loading">
-		<img src="./img/mainloading.gif" width="100%">
+      <img src="./img/mainloading.gif" width="100%" />
     </div>
     <section>
-        <div id="gameboy-screen" class="hidden">
-            <!-- clock -->
-            <h2 id="clock">00:00:00</h2>
-            
-            <!-- form for login -->
-            <form id="login-form" class="hidden">
-                <input type="text" placeholder="Write your ID" maxlength="10" size="15" required/>
-                <button>enter</button>
-            </form>
-        
-            <!-- greeting -->
-            <div id="greetingHead">
-                <h1 id="greeting" class="hidden"></h1>
-            </div>
-        
-            <!-- form for todo-list -->
-            <form id="todo-form" class="hidden">
-                <input type="text" placeholder="Write a To Do" size="15" required/>
-            </form>
-        
-            <!-- list to do -->
-            <ul id="todo-list"></ul>
-        
-            <!-- random quote & writer -->
-            <footer>
-                <div id="quote">
-                    <span></span>
-                    <span></span>
-                </div>
-                <div id="weather">
-                    <span>no info</span>
-                    <span>🤔</span>
-                </div>
-            </footer>
+      <div id="gameboy-screen" class="hidden">
+        <!-- clock -->
+        <h2 id="clock">00:00:00</h2>
+
+        <!-- form for login -->
+        <form id="login-form" class="hidden">
+          <input
+            type="text"
+            placeholder="Write your ID"
+            maxlength="10"
+            size="15"
+            required
+          />
+          <button>enter</button>
+        </form>
+
+        <!-- greeting -->
+        <div id="greetingHead">
+          <h1 id="greeting" class="hidden"></h1>
         </div>
+
+        <!-- form for todo-list -->
+        <form id="todo-form" class="hidden">
+          <input type="text" placeholder="Write a To Do" size="15" required />
+        </form>
+
+        <!-- list to do -->
+        <ul id="todo-list"></ul>
+
+        <!-- random quote & writer -->
+        <footer>
+          <div id="quote">
+            <span></span>
+            <span></span>
+          </div>
+          <div id="weather">
+            <span>no info</span>
+            <span>🤔</span>
+          </div>
+        </footer>
+      </div>
     </section>
 
     <!-- scripts -->
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
-</body>
+    <script src="./src/greeting.js"></script>
+    <script src="./src/clock.js"></script>
+    <script src="./src/quotes.js"></script>
+    <script src="./src/background.js"></script>
+    <script src="./src/todo.js"></script>
+    <script src="./src/weather.js"></script>
+  </body>
 </html>

@@ -1,174 +1,189 @@
 /* Import */
-/* @import "reset.css"; */
 @font-face {
-	font-family: 'NeoDunggeunmo';
-	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'NeoDunggeunmo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Tags */
 * {
-	margin: 0;
-	padding: 0;
-	/* color: black; */
-	color: white;
-	font-family: 'NeoDunggeunmo', serif;
-	background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'NeoDunggeunmo', serif;
+  background-repeat: no-repeat;
 }
 
-body { 
-	width: 960px;
-	height: 640px;
-	margin: 0 auto;
-	left: 50%;	/* 웹페이지의 중앙 고정*/
-	background-color: black;
-	background-image: url('./img/gameboy.png');
-	background-size: 1920px 1080px;
-	background-repeat: no-repeat;
-	background-position:top center;	/*배경의 웹 페이지 위쪽 + 중앙쪽 고정*/
-	padding-top: 220px; /* 게임기 화면 출력 높이 */
-	overflow: hidden;
+body {
+  width: 960px;
+  height: 640px;
+  margin: 0 auto;
+  left: 50%; /* 웹페이지의 중앙 고정*/
+  background-color: black;
+  background-image: url('./img/gameboy.png');
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  background-position: top center; /*배경의 웹 페이지 위쪽 + 중앙쪽 고정*/
+  padding-top: 220px; /* 게임기 화면 출력 높이 */
+  overflow: hidden;
 }
 
-button, label {
-    all: unset;
-    padding: 10px 20px;
-    text-align: center;
-    background-color: lightgreen;
-    color: white;
-    /* font-weight: 500; */
-    cursor: pointer;
-	border: 5px solid;
-	border-color: white;
-    border-radius: 10px;
-    transition: opacity linear .3s;
+button,
+label {
+  all: unset;
+  padding: 10px 20px;
+  text-align: center;
+  background-color: lightgreen;
+  color: white;
+  cursor: pointer;
+  border: 5px solid;
+  border-color: white;
+  border-radius: 10px;
+  transition: opacity linear 0.3s;
 }
 
 input {
-	color: black;
+  color: black;
 }
 
 section {
-	display: inline-block;
-	position: relative;
-	width: 960px;
-	height: 640px;
-	
-	/* 이미지 위치 */
+  display: inline-block;
+  position: relative;
+  width: 960px;
+  height: 640px;
+
+  /* 이미지 위치 */
 }
 footer {
-	text-align: center;
+  text-align: center;
 }
 
-h1 {padding-top: 2%; padding-bottom: 2%; font-size: 300%; cursor: default;}
-h3 {padding-top: 10px; padding-bottom: 10px; font-size: 250%; cursor: default;}
-li {margin: 2px 0;}
+h1 {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  font-size: 300%;
+  cursor: default;
+}
+h3 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 250%;
+  cursor: default;
+}
+li {
+  margin: 2px 0;
+}
 li button {
-    all: unset;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.5);
-    color: white;
-	margin-right: 10px;
-    /* font-weight: 500; */
-    cursor: pointer;
-	border: 2px solid;
-	border-radius: 5px;
-	border-color: black;
+  all: unset;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  margin-right: 10px;
+  /* font-weight: 500; */
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: black;
 }
 
 /* Id */
 #loding {
-	border-radius: 15px;
+  border-radius: 15px;
 }
 #clock {
-	display:inline-block;
-	position:relative;
-	color: black;
-    text-align: center;
-	font-size: 48px;
-	padding: 5px 15px;
-	top: 5%;
-	left: 75%;
-	
-	background-color: white;
+  display: inline-block;
+  position: relative;
+  color: black;
+  text-align: center;
+  font-size: 48px;
+  padding: 5px 15px;
+  top: 5%;
+  left: 75%;
 
-	border: 2px solid;
-	border-radius: 5px;
-	border-color: black;
-	box-shadow: 5px 5px rgba(90, 90, 90, 0.5);
+  background-color: white;
+
+  border: 2px solid;
+  border-radius: 5px;
+  border-color: black;
+  box-shadow: 5px 5px rgba(90, 90, 90, 0.5);
 }
 
 #login-form {
-	padding: 10px 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	/* display: inline-block; */
-	background-color: rgba(90, 90, 90, 0.5);
-	border-radius: 10px;
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* display: inline-block; */
+  background-color: rgba(90, 90, 90, 0.5);
+  border-radius: 10px;
 }
 #gameboy-screen {
-	/* position: absolute; */
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
-#greetingHead, #todo-form {
-	position: relative;
-	left: 5%;
-	width: 60%;
+#greetingHead,
+#todo-form {
+  position: relative;
+  left: 5%;
+  width: 60%;
 }
 #greeting {
-	display: inline-block;
-	padding: 10px 20px;
-	border-radius: 10px;
-	margin-bottom: 10px;
+  display: flex;
+  width: fit-content;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 #todo-form input {
-	width: 500px;
-	height: 32px;
-	font-size: 20px;
-	border: 0;
-	border-radius: 10px;
-	outline: none;
-	padding-left: 10px;
-	background-color: rgb(240, 239, 239);
+  width: 500px;
+  height: 32px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 10px;
+  background-color: rgb(240, 239, 239);
 }
 
 #todo-list {
-	overflow-y: scroll;
-	width: 90%;
-	height: 45%;
-	margin : auto auto;
+  overflow-y: scroll;
+  width: 90%;
+  height: 45%;
+  margin: auto auto;
 }
 
 #todo-list::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera*/
+  display: none; /* Chrome, Safari, Opera*/
 }
 
 #quote {
-	position: absolute;
-	bottom: 7%;
+  position: absolute;
+  bottom: 7%;
 }
 #weather {
-	position: absolute;
-	bottom: 0%;
+  position: absolute;
+  bottom: 0%;
 }
 
-#quote *, #weather *{
-	display: inline-block;
-	width: auto;
-	padding: 10px 20px;
-	background-color: rgba(90, 90, 90, 0.8);
-	border-radius: 10px;
-	margin: 5px;
+#quote *,
+#weather * {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: rgba(90, 90, 90, 0.4);
+  border-radius: 10px;
+  margin: 5px;
 }
 
 /* class */
 .hidden {
-	display: none;
+  display: none;
 }
