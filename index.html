@@ -4,21 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
     <title>Momentum App</title>
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/headerSection.css" />
+    <link rel="stylesheet" href="./styles/loginSection.css" />
+    <link rel="stylesheet" href="./styles/mainSection.css" />
+
+    <script src="./scripts/bootingScreen.js" defer></script>
+    <script src="./scripts/clock.js" defer></script>
+    <script src="./scripts/login.js" defer></script>
+    <script src="./scripts/greeting.js" defer></script>
+    <script src="./scripts/quotes.js" defer></script>
+    <script src="./scripts/todo.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
   </head>
   <body>
-    <!-- Main Screen -->
-    <div id="loading">
-      <img src="./img/mainloading.gif" width="100%" />
-    </div>
-    <section>
-      <div id="gameboy-screen" class="hidden">
-        <!-- clock -->
-        <h2 id="clock">00:00:00</h2>
+    <!-- Container -->
+    <div id="container">
+      <!-- Loading Screen (Section) -->
+      <section id="loading_screen" class="hidden">
+        <img src="./images/mainloading.gif" style="width: 100%" />
+      </section>
 
-        <!-- form for login -->
-        <form id="login-form" class="hidden">
+      <!-- Header Section -->
+      <header id="header">
+        <h2 class="header_clock">00:00:00</h2>
+      </header>
+
+      <!-- form for login -->
+      <section id="login">
+        <form class="login_form">
           <input
             type="text"
             placeholder="Write your ID"
@@ -28,40 +45,36 @@
           />
           <button>enter</button>
         </form>
+      </section>
 
-        <!-- greeting -->
-        <div id="greetingHead">
-          <h1 id="greeting" class="hidden"></h1>
+      <!-- Main Section -->
+      <main id="main" class="hidden">
+        <!-- Greeting Box -->
+        <div class="greeting_box">
+          <h1></h1>
         </div>
 
-        <!-- form for todo-list -->
-        <form id="todo-form" class="hidden">
+        <!-- ToDo Form Box -->
+        <form class="todo_form_box">
           <input type="text" placeholder="Write a To Do" size="15" required />
+          <button>Shoot</button>
         </form>
 
-        <!-- list to do -->
-        <ul id="todo-list"></ul>
+        <!-- Todo List Box -->
+        <ul class="todo_list_box"></ul>
+      </main>
 
-        <!-- random quote & writer -->
-        <footer>
-          <div id="quote">
-            <span></span>
-            <span></span>
-          </div>
-          <div id="weather">
-            <span>no info</span>
-            <span>🤔</span>
-          </div>
-        </footer>
-      </div>
-    </section>
-
-    <!-- scripts -->
-    <script src="./src/greeting.js"></script>
-    <script src="./src/clock.js"></script>
-    <script src="./src/quotes.js"></script>
-    <script src="./src/background.js"></script>
-    <script src="./src/todo.js"></script>
-    <script src="./src/weather.js"></script>
+      <!-- Footer Section -->
+      <footer>
+        <div id="quote">
+          <span></span>
+          <span></span>
+        </div>
+        <div id="weather">
+          <span>no info</span>
+          <span>🤔</span>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

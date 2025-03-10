@@ -1,0 +1,22 @@
+/* Tags */
+
+#quote {
+  position: absolute;
+  bottom: 7%;
+}
+#weather {
+  position: absolute;
+  bottom: 0%;
+}
+
+#quote *,
+#weather * {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: rgba(90, 90, 90, 0.4);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+/* class */

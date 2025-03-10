@@ -1,0 +1,66 @@
+/* Import */
+@font-face {
+  font-family: 'NeoDunggeunmo';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.3/NeoDunggeunmo.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Common */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'NeoDunggeunmo', serif;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/gameboy.png') top/cover no-repeat;
+  background-size: 1920px 1080px;
+}
+:root {
+  --background-color: #fff;
+  --text-color: #333;
+  --theme-color: dodgerblue;
+  --emphasized: orange;
+  --shadow-color: rgba(90, 90, 90, 0.4);
+}
+
+/* Container */
+#container {
+  position: absolute;
+  top: 220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 960px;
+  height: 640px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fadein {
+  transition: 0.4s ease opacity;
+  opacity: 1;
+}
+.fadeout {
+  transition: 0.4s ease opacity;
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 960px) {
+  #container {
+    width: 100vw;
+    height: calc(200vw / 3);
+  }
+}

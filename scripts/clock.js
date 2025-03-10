@@ -1,5 +1,5 @@
 // variables
-const clock = document.querySelector('h2#clock');
+const clock = document.querySelector('#header > .header_clock');
 
 getClock();
 // init

@@ -1,0 +1,21 @@
+/* Header */
+#header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+
+  /* Header Clock */
+  & > .header_clock {
+    width: fit-content;
+    color: var(--text-color);
+    padding: 5px 15px;
+    background-color: var(--background-color);
+    font-size: 2.8rem;
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(90, 90, 90, 0.4);
+  }
+}
